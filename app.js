@@ -50,9 +50,12 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors({
-  origin: "*"
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://your-frontend-domain.com"], // add both
+    credentials: true,
+  })
+);
 app.use('/', express.static('images'));
 
 
