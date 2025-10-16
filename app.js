@@ -52,7 +52,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://your-frontend-domain.com"], // add both
+    origin: ["http://localhost:3000", "https://emenu-emil.netlify.app"], // add both
     credentials: true,
   })
 );
